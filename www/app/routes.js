@@ -7,13 +7,14 @@
     routes.$inject = ['$stateProvider', '$urlRouterProvider'];
     function routes($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('home', {
-                url: '/home',
-                templateUrl: 'app/features/home/template/template.html',
-                controller: 'HomeController as vm'
-            })
-
-        $urlRouterProvider.otherwise('/home');
+        	.state('menu', {
+                url: '/menu',
+                abstract: true,
+                templateUrl: 'app/menu/template/template.html',
+                cache: false
+            });
+        
+        $urlRouterProvider.otherwise('/menu/home');
     }
 
 })();
