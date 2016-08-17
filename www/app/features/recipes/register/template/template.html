@@ -1,0 +1,28 @@
+<div class="bar bar-header bar-positive">
+  <h4 class="title">Register a new recipe</h4>
+</div>
+
+<div class="list has-header">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Time in minutes</span>
+    <input type="number" placeholder="Time in minutes">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Portions</span>
+    <input type="number" placeholder="Portions">
+  </label>
+</div>
+
+<div class="list card" ng-if="vm.pictureSrc">
+  <div class="item item-image">
+    <img src="{{ vm.pictureSrc }}">
+  </div>
+</div>
+
+<div class="bar bar-footer bar-positive">
+  <button class="button button-clear" ng-click="vm.takePicture()">Add a photo</button>
+</div>
