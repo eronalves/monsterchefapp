@@ -12,8 +12,7 @@
                 cache: false,
                 views: {
                     menuContent: {
-                        templateUrl: 'app/features/home/template/template.html',
-                        controller: 'HomeController as vm'
+                        templateUrl: 'app/features/home/template/template.html'
                     }
                 }
                     

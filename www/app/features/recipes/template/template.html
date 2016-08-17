@@ -1,13 +1,11 @@
-<div class="bar bar-header bar-positive item-input-inset">
-  <label class="item-input-wrapper">
-    <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="Search a recipe">
-  </label>
-</div>
+<ion-view view-title="Receitas" >
+  <ion-content>
 
-<div class="list card"  ng-repeat="recipe in vm.recipes">
-  <a class="item item-thumbnail-left" href="#">
-    <img ng-src="data:image/jpeg;base64,{{ recipe.photoBase64 }}">
-    <h2>{{ recipe.name }}</h2>
-  </a>
-</div>
+      <div class="list card"  ng-repeat="recipe in vm.recipes">
+        <a class="item item-thumbnail-left" href="#">
+          <img ng-src="data:image/jpeg;base64,{{ recipe.photoBase64 }}">
+          <h2>{{ recipe.name }}</h2>
+        </a>
+      </div>
+  </ion-content>
+</ion-view>

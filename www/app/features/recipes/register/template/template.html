@@ -1,27 +1,29 @@
-<div class="bar bar-header bar-positive">
-  <h4 class="title">Register a new recipe</h4>
-</div>
+<ion-view view-title="Adicionar receita" >
+  <ion-content>
+    <div class="list has-header">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nome</span>
+        <input type="text" placeholder="Nome" ng-model="vm.recipe.name">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Tempo de preparo</span>
+        <input type="number" placeholder="Tempo de preparo" ng-model="vm.recipe.timeInMinutes">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Porções</span>
+        <input type="number" placeholder="Porções" ng-model="vm.recipe.portions">
+      </label>
 
-<div class="list has-header">
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Name</span>
-    <input type="text" placeholder="Name" ng-model="vm.recipe.name">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Time in minutes</span>
-    <input type="number" placeholder="Time in minutes" ng-model="vm.recipe.timeInMinutes">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Portions</span>
-    <input type="number" placeholder="Portions" ng-model="vm.recipe.portions">
-  </label>
+      <div class="item item-image" ng-if="vm.pictureSrc">
+        <img ng-src="data:image/jpeg;base64,{{ vm.pictureSrc }}">
+      </div>
+    </div>
 
-  <div class="item item-image" ng-if="vm.pictureSrc">
-    <img ng-src="data:image/jpeg;base64,{{ vm.pictureSrc }}">
-  </div>
-</div>
+   
+  </ion-content>
 
-<div class="bar bar-footer bar-positive">
-  <button class="button button-clear" ng-click="vm.takePicture()">Add a picture</button>
-  <button class="button button-clear" ng-click="vm.register()">Register</button>
-</div>
+   <div class="bar bar-footer bar-positive">
+      <button class="button button-clear" ng-click="vm.takePicture()">Adicionar foto</button>
+      <button class="button button-clear" ng-click="vm.register()">Adicionar</button>
+    </div>
+</ion-view>
