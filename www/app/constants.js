@@ -3,7 +3,7 @@
 	angular.module('monsterchef-app')
 	.constant('ApiEndpoint',
      {
-        // url: 'http://localhost:8100/heroku'
-		url: 'https://monsterchef.herokuapp.com'
+        url: 'http://localhost:8100/api'
+		// url: 'https://monsterchef.herokuapp.com'
     });
 })();

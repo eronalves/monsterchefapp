@@ -3,8 +3,8 @@
   "app_id": "8e84998d",
   "proxies": [
     {
-      "path": "/heroku",
-      "proxyUrl": "https://monsterchef.herokuapp.com"
+      "path": "/api",
+      "proxyUrl": "https://monsterchef.herokuapp.com/api"
     }
   ]
 }
