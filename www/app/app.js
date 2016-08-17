@@ -1,6 +1,6 @@
 (function() {
   'use strict';
   
-  window.monsterchefApp = angular.module('monsterchef-app', ['ionic']);
+  window.monsterchefApp = angular.module('monsterchef-app', ['ionic', 'ngCordova']);
 
 })();

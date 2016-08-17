@@ -9,17 +9,24 @@
         var vm = this;
 
         vm.register = function() {
-            RecipesService.post(vm.recipe);
-        };
-
-        vm.takePicture = function() {
-            $cordovaCamera.getPicture().then(function(response) {
-                vm.pictureSrc = "data:image/jpeg;base64," + response;
+            vm.recipe.photo = vm.pictureSrc;
+            
+            RecipesService.post(vm.recipe).then(function(response) {
+                console.log(response);
             });
         };
 
-        init();
+        vm.takePicture = function() {
+            var options = {
+                quality: 100,
+                destinationType: Camera.DestinationType.DATA_URL,
+                encodingType: Camera.EncodingType.JPEG,
+                correctOrientation:true
+            };
+
+            $cordovaCamera.getPicture(options).then(function(response) {
+                vm.pictureSrc = response;
+            });
+        };
     }
-
-
 })();

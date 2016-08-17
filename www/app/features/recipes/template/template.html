@@ -7,7 +7,7 @@
 
 <div class="list card"  ng-repeat="recipe in vm.recipes">
   <a class="item item-thumbnail-left" href="#">
-    <img src="cover.jpg">
+    <img ng-src="data:image/jpeg;base64,{{ recipe.photoBase64 }}">
     <h2>{{ recipe.name }}</h2>
   </a>
 </div>

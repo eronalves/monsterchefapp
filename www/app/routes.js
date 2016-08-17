@@ -18,7 +18,7 @@
                 controller: 'RegisterRecipesController as vm'
             });
 
-        $urlRouterProvider.otherwise('/recipes/register');
+        $urlRouterProvider.otherwise('/recipes');
     }
 
 })();
