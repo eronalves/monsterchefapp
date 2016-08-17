@@ -7,18 +7,14 @@
     routes.$inject = ['$stateProvider', '$urlRouterProvider'];
     function routes($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('recipes', {
-                url: '/recipes',
-                templateUrl: 'app/features/recipes/template/template.html',
-                controller: 'RecipesController as vm'
-            })
-            .state('registerRecipes', {
-                url: '/recipes/register',
-                templateUrl: 'app/features/recipes/register/template/template.html',
-                controller: 'RegisterRecipesController as vm'
+        	.state('menu', {
+                url: '/menu',
+                abstract: true,
+                templateUrl: 'app/menu/template/template.html',
+                cache: false
             });
-
-        $urlRouterProvider.otherwise('/recipes');
+        
+        $urlRouterProvider.otherwise('/menu/recipes');
     }
 
 })();
