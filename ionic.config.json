@@ -1,4 +1,10 @@
 {
   "name": "monsterchefapp",
-  "app_id": "6ce89bbd"
+  "app_id": "6ce89bbd",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://monsterchef.herokuapp.com/api"
+    }
+  ]
 }
